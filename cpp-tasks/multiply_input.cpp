@@ -8,4 +8,5 @@ int main(){
     x = x * 2;
     cout << x;
 
+    return 0
 }
