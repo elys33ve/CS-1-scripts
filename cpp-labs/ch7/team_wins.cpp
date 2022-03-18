@@ -47,7 +47,7 @@ int Team::get_losses(){
 }
 
 double Team::get_win_percent(){
-   double win_percent = wins / (wins + losses);
+   double win_percent = (double)wins / ((double)wins + (double)losses);
    return win_percent;
 }
 
