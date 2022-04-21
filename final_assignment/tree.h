@@ -37,6 +37,12 @@ public:
 	void go_left();			//change curr node to left child
 	void go_right();		//change curr node to right child
 
+	void go_parent();		//change curr node to parent
+
+	void go_to(int idx);	//change curr node to index parameter
+	void go_next();			//change curr node to next
+	void go_previous();		//change curr node to previous
+
 	void reset_to_head();	//reset curr index value to point to head of tree
 
 	void insert(int val);	//insert elements into binary search tree
@@ -48,3 +54,6 @@ public:
 
 
 };
+
+
+
