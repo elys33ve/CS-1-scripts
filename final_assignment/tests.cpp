@@ -1,5 +1,5 @@
 #include <iostream>
-#include"tree.cpp"
+#include"tree.cpp"	//shouldnt be the cpp file but vs code was being stupid
 
 using namespace std;
 
