@@ -132,10 +132,9 @@ bool tree::left_null(){								//check if left child of curr node is null
 	int child = left_child(index);
 	bool null = false;
 
-	if (child == -1 or child > curr_array_size){
+	if (child >= curr_array_size){
 		null = true;
 	}
-
 	return null;
 }
 //CHECK RIGHT CHILD = NULL
@@ -143,13 +142,16 @@ bool tree::right_null(){							//check if right child of curr node is null
 	int child = right_child(index);
 	bool null = false;
 
-	if (child == -1 or child > curr_array_size){
+	if (child >= curr_array_size){
 		null = true;
 	}
-	
 	return null;
 }
 
+//CURRENT INDEX = INDEX PARAMETER
+void tree::go_to(int idx){							//change curr node to index parameter
+	index = idx;
+}
 //CURRENT INDEX = LEFT CHILD
 void tree::go_left(){								//change curr node to left child
 	index = left_child(index);
@@ -157,6 +159,20 @@ void tree::go_left(){								//change curr node to left child
 //CURRENT INDEX = RIGHT CHILD									
 void tree::go_right(){								//change curr node to right child
 	index = right_child(index);
+}
+
+//CURRENT INDEX = PARENT
+void tree::go_parent(){								//change curr node to parent
+	index = get_parent(index);
+}
+
+//CURRENT INDEX = NEXT
+void tree::go_next(){								//change curr node to next
+	index = index +1;
+}
+//CURRENT INDEX = PREVIOUS
+void tree::go_previous(){							//change curr node to previous
+	index = index -1;
 }
 
 //RESET TO HEAD OF TREE		
